@@ -11,6 +11,20 @@ function App() {
       setConvertedValue(response.data);
     });
   };
+  const options = () => {
+    return (
+      <>
+        {" "}
+        <option value="astronomical-unit">Astronomical Unit</option>
+        <option value="kilometer">Kilometer</option>
+        <option value="light-minute">Light Minute</option>
+        <option value="light-second">Light Second</option>
+        <option value="light-year">Light Year</option>
+        <option value="miles">Miles</option>
+        <option value="parsec">Parsec</option>
+      </>
+    );
+  };
   return (
     <>
       <div className="grid h-screen place-items-center">
@@ -24,13 +38,7 @@ function App() {
                 defaultValue="light-year"
                 onChange={(e) => setFrom(e.target.value)}
               >
-                <option value="astronomical-unit">Astronomical Unit</option>
-                <option value="kilometer">Kilometer</option>
-                <option value="light-minute">Light Minute</option>
-                <option value="light-second">Light Second</option>
-                <option value="light-year">Light Year</option>
-                <option value="miles">Miles</option>
-                <option value="parsec">Parsec</option>
+                {options()}
               </select>
             </label>
             <label className="p-2">
@@ -41,13 +49,7 @@ function App() {
                 defaultValue="kilometer"
                 onChange={(e) => setTo(e.target.value)}
               >
-                <option value="astronomical-unit">Astronomical Unit</option>
-                <option value="kilometer">Kilometer</option>
-                <option value="light-minute">Light Minute</option>
-                <option value="light-second">Light Second</option>
-                <option value="light-year">Light Year</option>
-                <option value="miles">Miles</option>
-                <option value="parsec">Parsec</option>
+                {options()}
               </select>
             </label>
           </div>
